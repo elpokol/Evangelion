@@ -1,0 +1,90 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 36,
+  "margin-top": 6,
+  "margin-left": 10,
+  "margin-right": 10,
+
+  "modules-left": ["hyprland/window", "custom/cpu"],
+  
+  "modules-center": [
+    "clock",
+    "custom/music",
+    "custom/wayves"
+  ],
+  
+  "modules-right": [
+    "network",
+    "pulseaudio",
+    "backlight",
+    "battery",
+    "tray"
+  ],
+
+  "hyprland/window": {
+    "max-length": 40,
+    "separate-outputs": true
+  },
+
+"custom/wayves": {
+    "format": "{}",
+    "exec": "/home/Eva/.local/bin/cava_waybar.sh",
+    "interval": "persistent",
+    "return-type": "json"
+},
+
+  "custom/cpu": {
+    "format": " {}%",
+    "interval": 2,
+    "exec": "top -bn1 | grep 'Cpu(s)' | awk '{print 100 - $8}'",
+    "on-click": "kitty -e btop"
+  },
+
+  "custom/music": {
+    "exec": "~/.config/waybar/scripts/music.sh",
+    "interval": 2,
+    "return-type": "json",
+    "on-click": "playerctl play-pause"
+  },
+
+  "clock": {
+    "format": "{:%A %d %B | %H:%M}",
+    "timezone": "Asia/Yekaterinburg",
+    "tooltip": false,
+    "on-click": "wofi --show drun"
+  },
+
+  "network": {
+    "format-wifi": " {signalStrength}%",
+    "format-ethernet": "󰈀 Wired",
+    "format-disconnected": "󰖪",
+    "tooltip-format": "{essid}",
+    "on-click": "kitty -e nmtui"
+  },
+
+  "pulseaudio": {
+    "format": " {volume}%",
+    "format-muted": "",
+    "on-click": "pavucontrol"
+  },
+
+  "backlight": {
+    "format": " {percent}%"
+  },
+
+  "battery": {
+    "format": " {capacity}%",
+    "format-charging": " {capacity}%",
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "tooltip-format": "{timeTo}",
+    "on-click": "upower -i $(upower -e | grep BAT)"
+  },
+
+  "tray": {
+    "spacing": 10
+  }
+}
