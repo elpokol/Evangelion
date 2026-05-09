@@ -43,7 +43,7 @@ require("lazy").setup({
         Number = { fg = "#ff66cc" },
         String = { fg = "#ff88cc" },
         Type = { fg = "#5ea1ff", italic = true },
-        Comment = { fg = "#7b8496", italic = true }
+        Comment = { fg = "#7b8496", italic = true },
         Title = { fg = "#bd5eff", bold = true },
         Visual = { bg = "#3344aa", fg = "#ffffff" },
         Search = { bg = "#aa44ff", fg = "#ffffff" },
