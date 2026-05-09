@@ -1,0 +1,126 @@
+* {
+  font-family: JetBrainsMono Nerd Font, Noto Color Emoji;
+  font-size: 13px;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+window#waybar {
+  background: rgba(8, 12, 20, 0.92);
+  border-radius: 14px;
+  color: #b7c9e2;
+  box-shadow: 0 0 18px rgba(100, 130, 255, 0.45), inset 0 0 2px rgba(150, 180, 255, 0.15);
+  border: 1px solid rgba(80, 120, 210, 0.3);
+}
+
+#window,
+#clock,
+#network,
+#pulseaudio,
+#backlight,
+#battery,
+#custom-cpu,
+#tray,
+#custom-wayves {
+  padding: 6px 12px;
+  margin: 4px;
+  border-radius: 10px;
+  background: rgba(12, 18, 28, 0.75);
+}
+
+#clock:hover,
+#network:hover,
+#pulseaudio:hover,
+#battery:hover,
+#custom-cpu:hover,
+#custom-wayves:hover {
+  background: rgba(70, 100, 170, 0.35);
+  box-shadow: 0 0 14px rgba(90, 130, 255, 0.75), inset 0 0 4px rgba(140, 180, 255, 0.3);
+}
+
+#custom-music-prev,
+#custom-music-play,
+#custom-music-next {
+  color: #a899e6;
+  background: rgba(25, 30, 55, 0.75);
+  padding: 0 10px;
+  border-radius: 10px;
+  text-shadow: 0 0 6px #7c6bd6, 0 0 12px #5a4bb5;
+  box-shadow: none;
+}
+
+#custom-music-prev:hover,
+#custom-music-play:hover,
+#custom-music-next:hover {
+  color: #cbbfff;
+  background: rgba(90, 80, 170, 0.4);
+  box-shadow: 0 0 14px #7a6ad6, 0 0 22px #5e4fc0;
+}
+
+#custom-wayves {
+  color: #a8b9f0;
+  font-family: monospace;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-shadow: 0 0 6px #6d7fe0, 0 0 3px #a0b0ff;
+  transition: all 0.1s ease;
+  min-width: 180px;
+}
+
+#window {
+  color: #b1c6ef;
+  font-weight: bold;
+  text-shadow: 0 0 4px #5f73bc;
+}
+
+#custom-cpu {
+  color: #9eb2f0;
+}
+
+#clock {
+  font-size: 15px;
+  font-weight: bold;
+  color: #bbcaf5;
+  text-shadow: 0 0 5px #6c7fd8;
+}
+
+#network {
+  color: #9eb2f0;
+}
+
+#pulseaudio {
+  color: #8eb0f5;
+}
+
+#backlight {
+  color: #a194e8;
+}
+
+#battery {
+  color: #aab9f2;
+}
+
+#battery.critical {
+  color: #f5bc70;
+  text-shadow: 0 0 8px #e0a050;
+  animation: reiBlink 1s ease-in-out infinite;
+}
+
+@keyframes reiBlink {
+  0% { opacity: 1; text-shadow: 0 0 6px #e0a050; }
+  50% { opacity: 0.4; text-shadow: 0 0 16px #f5bc70; }
+  100% { opacity: 1; text-shadow: 0 0 6px #e0a050; }
+}
+
+#battery.warning {
+  color: #e5bc88;
+}
+
+#tray > .ne {
+  color: #a0b4e8;
+}
+
+#tray > .ne:hover {
+  background: rgba(80, 110, 190, 0.45);
+  box-shadow: 0 0 10px #5f78d0;
+}
