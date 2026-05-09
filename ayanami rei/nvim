@@ -1,0 +1,200 @@
+
+vim.opt.clipboard = "unnamedplus"
+
+-- =========================
+-- (ВАЖНО)
+-- =========================
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
+
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+vim.opt.rtp:prepend(lazypath)
+
+require("lazy").setup({
+
+
+
+
+  {
+    "scottmckendry/cyberdream.nvim",
+    priority = 1000,
+    opts = {
+      transparent = true,           
+      italic_comments = true,
+      borderless_pickers = true,   
+      terminal_colors = true,      
+      saturation = 1.0,             
+      variant = "default",         
+      colors = {
+        magenta = "#bd5eff",        -- яркий фиолетовый
+        purple = "#9d7cd8",         -- мягкий пурпурный
+        blue = "#5ea1ff",           -- неоновый голубой
+        cyan = "#5ef1ff",           -- яркий циан
+        green = "#00ffcc",          -- бирюзовый 
+        red = "#ff3388",            -- розово-красный 
+	orange = "#ffaa44",         -- тёплый оранжевый
+        yellow = "#ffcc44",         -- приглушённый жёлтый
+      },
+      highlights = {
+        Keyword = { fg = "#bd5eff", bold = true },
+        Function = { fg = "#5ef1ff", bold = true },
+        Identifier = { fg = "#5ea1ff" },
+        Number = { fg = "#ff66cc" },
+        String = { fg = "#ff88cc" },
+        Type = { fg = "#5ea1ff", italic = true },
+        Comment = { fg = "#7b8496", italic = true }
+        Title = { fg = "#bd5eff", bold = true },
+        Visual = { bg = "#3344aa", fg = "#ffffff" },
+        Search = { bg = "#aa44ff", fg = "#ffffff" },
+        IncSearch = { bg = "#ff44aa", fg = "#ffffff" },
+      },
+    },
+    config = function()
+      vim.cmd("colorscheme cyberdream")
+    end,
+  },
+
+  -- (nvim-tree) 
+  {
+    "nvim-tree/nvim-tree.lua",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    config = function()
+      require("nvim-tree").setup({
+        view = {
+          width = 32,
+          side = "left",
+          preserve_window_proportions = false,
+          signcolumn = "no",
+        },
+
+        renderer = {
+          highlight_opened_files = "all",
+          highlight_git = true,
+          indent_markers = {
+            enable = true,
+            icons = {
+              corner = "└",
+              edge = "│",
+              none = " ",
+            },
+          },
+          icons = {
+            show = {
+              file = true,
+              folder = true,
+              folder_arrow = true,
+              git = true,
+            },
+            glyphs = {
+              default = "󰈙",
+              symlink = "",
+              folder = {
+                arrow_open = "",
+                arrow_closed = "",
+                default = "󰉋",
+                open = "󰉓",
+                empty = "󰉌",
+                empty_open = "󰉍",
+                symlink = "",
+                symlink_open = "",
+              },
+              git = {
+                unstaged = "󰄱",
+                staged = "󰱒",
+                unmerged = "󰜖",
+                renamed = "󰑕",
+                untracked = "󰫓",
+                deleted = "󰅖",
+                ignored = "",
+              },
+            },
+          },
+        },
+
+        update_focused_file = {
+          enable = true,
+          update_root = false,
+        },
+
+        filters = {
+          dotfiles = false,
+        },
+      })
+
+            vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", { silent = true })
+
+            vim.api.nvim_set_hl(0, "NvimTreeNormal", { bg = "NONE" })
+      vim.api.nvim_set_hl(0, "NvimTreeNormalNC", { bg = "NONE" })
+      vim.api.nvim_set_hl(0, "NvimTreeEndOfBuffer", { bg = "NONE" })
+
+           vim.api.nvim_set_hl(0, "NvimTreeCursorLine", { bg = "#1a1155", bold = true })
+
+            vim.api.nvim_set_hl(0, "NvimTreeFolderName", { fg = "#5ea1ff", bold = false })
+      vim.api.nvim_set_hl(0, "NvimTreeOpenedFolderName", { fg = "#bd5eff", bold = true })
+      vim.api.nvim_set_hl(0, "NvimTreeEmptyFolderName", { fg = "#565f89" })
+
+      
+      vim.api.nvim_set_hl(0, "NvimTreeFileName", { fg = "#c0caf5" })
+      vim.api.nvim_set_hl(0, "NvimTreeSymlink", { fg = "#5ef1ff", italic = true })
+
+      
+      vim.api.nvim_set_hl(0, "NvimTreeOpenedFile", { fg = "#bd5eff", bold = true, underline = true })
+
+      
+      vim.api.nvim_set_hl(0, "NvimTreeGitDirty", { fg = "#ffaa44" })    
+      vim.api.nvim_set_hl(0, "NvimTreeGitStaged", { fg = "#00ffcc" })    
+      vim.api.nvim_set_hl(0, "NvimTreeGitNew", { fg = "#00ffcc" })       
+      vim.api.nvim_set_hl(0, "NvimTreeGitDeleted", { fg = "#ff3388" })   
+      vim.api.nvim_set_hl(0, "NvimTreeGitIgnored", { fg = "#565f89" })   
+      
+      vim.api.nvim_set_hl(0, "NvimTreeIndentMarker", { fg = "#2a2b3e" })
+      vim.api.nvim_set_hl(0, "NvimTreeFolderIcon", { fg = "#5ea1ff" })
+      vim.api.nvim_set_hl(0, "NvimTreeRootFolder", { fg = "#bd5eff", bold = true })
+    end,
+  },
+
+    {
+    "nvim-lualine/lualine.nvim",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    config = function()
+      require("lualine").setup({
+        options = {
+          theme = "cyberdream",    
+	  section_separators = "",
+          component_separators = "",
+          transparent = true,
+        },
+      })
+    end,
+  },
+})
+
+
+vim.cmd([[
+  highlight Normal guibg=NONE
+  highlight NormalNC guibg=NONE
+  highlight SignColumn guibg=NONE
+  highlight EndOfBuffer guibg=NONE
+  highlight LineNr guibg=NONE
+  highlight FoldColumn guibg=NONE
+]])
+
+
+vim.api.nvim_create_autocmd("VimEnter", {
+  callback = function()
+    local ok, api = pcall(require, "nvim-tree.api")
+    if ok and api and api.tree then
+      api.tree.open()
+      api.tree.find_file({ open = true, focus = false })
+    end
+  end,
+})
+
+vim.api.nvim_create_autocmd({ "User" }, {
+  pattern = "PywalUpdate",
+  callback = function()
+    vim.cmd.colorscheme("pywal16")
+    print("🎨 Neovim theme synced with wallpaper!")
+  end,
+})
