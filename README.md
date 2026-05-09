@@ -7,12 +7,17 @@ Waybar, wofi, kitty and nvim in Evangelion style
 
 # Kitty
 
-``sudo pacman -S python-pywal
-wal -i /your/image.jpg
+``sudo pacman -S python-pywal``
+
+``wal -i /your/image.jpg``
+
 nvim ~/.config/kitty/kitty.conf
-PASTE include /home/Eva/.cache/wal/colors-kitty.conf
+
+``include /home/Eva/.cache/wal/colors-kitty.conf``
+
 nvim ~/.config/hypr/hyprland.conf
-PASTE exec-once = wal -i /home/user/your/image.jpg``
+
+``exec-once = wal -i /home/user/your/image.jpg``
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/ad19e3e2-9263-4892-9d1e-b31ae990806a" />
 
