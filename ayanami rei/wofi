@@ -1,0 +1,95 @@
+
+
+window {
+    background-color: rgba(10, 11, 20, 0.92);
+    border-radius: 28px;
+    border: 2px solid #7aa2f7;
+    box-shadow: 0 0 20px rgba(122, 162, 247, 0.6), inset 0 0 10px rgba(122, 162, 247, 0.1);
+    font-family: "JetBrains Mono Nerd Font", monospace;
+}
+
+#input {
+    background-color: rgba(26, 27, 38, 0.9);
+    color: #00ffff;
+    border: 1px solid #00ffff;
+    border-radius: 20px;
+    margin: 20px;
+    padding: 14px;
+    font-size: 16px;
+    box-shadow: 0 0 12px rgba(0, 255, 255, 0.4), inset 0 0 8px rgba(0, 255, 255, 0.1);
+}
+
+#input:focus {
+    border-color: #ff00ff;
+    box-shadow: 0 0 18px #ff00ff, inset 0 0 8px rgba(255, 0, 255, 0.2);
+    outline: none;
+}
+
+#inner-box {
+    background-color: transparent;
+}
+
+#outer-box {
+    background-color: transparent;
+    margin: 10px;
+}
+
+#scroll {
+    background-color: transparent;
+}
+
+#text {
+    color: #c0caf5;
+    margin: 6px;
+    font-size: 14px;
+    text-shadow: 0 0 4px rgba(192, 202, 245, 0.5);
+}
+
+#text:selected {
+    color: #0a0b14;
+    font-weight: bold;
+    text-shadow: 0 0 6px #ffffff;
+}
+
+#entry {
+    background-color: transparent;
+    padding: 10px 16px;
+    margin: 4px 8px;
+    border-radius: 18px;
+    transition: all 0.15s ease;
+}
+
+#entry:selected {
+    background: linear-gradient(135deg, #7aa2f7, #bb9af7);
+    box-shadow: 0 0 16px #bb9af7;
+}
+
+#entry:selected #text {
+    color: #0a0b14;
+}
+
+#img {
+    margin-right: 14px;
+}
+
+/* Стиль для иконок (если есть) */
+#entry image {
+    color: #7aa2f7;
+}
+
+#entry:selected image {
+    color: #0a0b14;
+}
+
+/* Полоса прокрутки */
+scrollbar {
+    background-color: transparent;
+    border-radius: 10px;
+}
+
+scrollbar slider {
+    background-color: #7aa2f7;
+    border-radius: 10px;
+    min-width: 6px;
+    box-shadow: 0 0 8px #7aa2f7;
+}
