@@ -1,5 +1,5 @@
 # Evangelion
-Waybar, wofi, kitty and nvim in Evangelion style
+Waybar, wofi, cava, kitty and nvim in Evangelion style
 
 # Waybar-wofi
 
