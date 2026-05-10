@@ -33,6 +33,15 @@ nvim ~/.config/hypr/hyprland.conf
 
 <img width="1920" height="1080" alt="2026-05-10-092924_hyprshot" src="https://github.com/user-attachments/assets/53f50ac8-1909-40fe-85ef-4d79a4ef98cb" />
 
+nvim ~/.bashrc
+
+``RED='\[\e[91m\]'
+ORANGE='\[\e[93m\]'
+RESET='\[\e[0m\]'``
+
+``PS1="${RED}┌─[${ORANGE}\u@\h${RED}]—[${ORANGE}\w${RED}]
+└─[${ORANGE}➤${RED}➤${RESET} "``
+
 
 nvim ~/.config/kitty/kitty.conf
 
