@@ -1,0 +1,137 @@
+* {
+  font-family: JetBrainsMono Nerd Font, Noto Color Emoji;
+  font-size: 13px;
+  border: none;
+  transition: all 0.15s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+window#waybar {
+  background: rgba(10, 5, 8, 0.94);
+  border-radius: 14px;
+  color: #f5a97f;
+  box-shadow: 0 0 22px rgba(220, 60, 30, 0.55), inset 0 0 2px rgba(255, 100, 50, 0.3);
+  border: 1px solid rgba(220, 70, 40, 0.5);
+}
+
+#window,
+#clock,
+#network,
+#pulseaudio,
+#backlight,
+#battery,
+#custom-cpu,
+#tray,
+#custom-wayves {
+  padding: 6px 12px;
+  margin: 4px;
+  border-radius: 10px;
+  background: rgba(20, 8, 14, 0.8);
+}
+
+#clock:hover,
+#network:hover,
+#pulseaudio:hover,
+#battery:hover,
+#custom-cpu:hover,
+#custom-wayves:hover {
+  background: rgba(220, 70, 45, 0.35);
+  box-shadow: 0 0 18px rgba(230, 70, 40, 0.85), inset 0 0 4px rgba(255, 120, 70, 0.4);
+}
+
+
+#custom-music-prev,
+#custom-music-play,
+#custom-music-next {
+  color: #ff7c5f;
+  background: rgba(40, 15, 25, 0.85);
+  padding: 0 10px;
+  border-radius: 10px;
+  text-shadow: 0 0 8px #c04020, 0 0 14px #a03018;
+  box-shadow: none;
+}
+
+#custom-music-prev:hover,
+#custom-music-play:hover,
+#custom-music-next:hover {
+  color: #ffb08c;
+  background: rgba(180, 60, 40, 0.5);
+  box-shadow: 0 0 16px #e05028, 0 0 28px #b03010;
+}
+
+
+#custom-wayves {
+  color: #ff8c5f;
+  font-family: monospace;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-shadow: 0 0 8px #d04020, 0 0 4px #ff7040;
+  transition: all 0.1s ease;
+  min-width: 180px;
+}
+
+
+#window {
+  color: #ffaa7f;
+  font-weight: bold;
+  text-shadow: 0 0 5px #b04020;
+}
+
+
+#custom-cpu {
+  color: #ff9f6f;
+}
+
+
+#clock {
+  font-size: 15px;
+  font-weight: bold;
+  color: #ffaa7a;
+  text-shadow: 0 0 6px #c04020;
+}
+
+
+#network {
+  color: #ff9f6f;
+}
+
+
+#pulseaudio {
+  color: #ff8a5f;
+}
+
+
+#backlight {
+  color: #e09170;
+}
+
+
+#battery {
+  color: #ffaa7a;
+}
+
+
+#battery.critical {
+  color: #ff6a4a;
+  text-shadow: 0 0 12px #ff3020;
+  animation: askaBlink 0.9s ease-in-out infinite;
+}
+
+@keyframes askaBlink {
+  0% { opacity: 1; text-shadow: 0 0 8px #ff4020; }
+  50% { opacity: 0.4; text-shadow: 0 0 20px #ff7040; }
+  100% { opacity: 1; text-shadow: 0 0 8px #ff4020; }
+}
+
+#battery.warning {
+  color: #ffaf7a;
+}
+
+
+#tray > .ne {
+  color: #ffaa7f;
+}
+
+#tray > .ne:hover {
+  background: rgba(200, 70, 45, 0.5);
+  box-shadow: 0 0 12px #e05030;
+}
