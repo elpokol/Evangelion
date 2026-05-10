@@ -46,6 +46,11 @@ DELETE ``exec-once = wal -i /home/user/your/image.jpg``
 
 <img width="1920" height="1080" alt="2026-05-10-093259_hyprshot" src="https://github.com/user-attachments/assets/5e361bd3-61c3-4ac7-b7f3-13c205b1d32d" />
 
+# cava
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/176875b2-5db3-4aac-98d8-91b0b27b9699" />
+
+
 
 
 
