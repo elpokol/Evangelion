@@ -1,0 +1,105 @@
+# Прозрачность фона (0.0 = полностью прозрачный, 1.0 = непрозрачный)
+background_opacity 0.7
+
+dynamic_background_opacity yes
+
+# Чтобы прозрачность работала в Hyprland
+linux_display_server x11
+
+
+
+
+cursor #f5e0dc
+selection_background #f5e0dc
+cursor_trail 5
+cursor_trail_decay 0.3 0.8
+cursor_blink_interval 0
+repaint_delay 5
+input_delay 3
+cursor_shape block
+
+
+font_family JetBrainsMono Nerd Font
+font_size 12
+
+window_padding_width 8
+
+window_border_radius 12
+
+scrollback_lines 10000
+hide_window_decorations titlebar-only
+
+
+
+foreground            #c0caf5
+background            #1a1b26
+
+selection_foreground  #1a1b26
+selection_background  #7aa2f7
+
+cursor                #bb9af7
+cursor_text_color     #1a1b26
+
+color0  #15161e
+color1  #f7768e
+color2  #9ece6a
+color3  #e0af68
+color4  #7aa2f7
+color5  #bb9af7
+color6  #7dcfff
+color7  #a9b1d6
+
+color8  #414868
+color9  #ff7a93
+color10 #b9f27c
+color11 #ffcf6a
+color12 #7dcfff
+color13 #caa9fa
+color14 #89ddff
+color15 #c0caf5
+
+
+
+font_family JetBrainsMono Nerd Font
+bold_font auto
+italic_font auto
+bold_italic_font auto
+
+font_size 11.5
+
+cursor_shape block
+cursor_blink_interval 0.5
+
+window_padding_width 10
+
+
+background #0a0508
+foreground #ffaa77
+
+color0  #1a0a10
+color8 #552233
+
+color1  #ff2211
+color9  #ff4433
+
+color2  #aa4422
+color10 #cc6633
+
+color3  #ff8833
+color11 #ffaa55
+
+color4  #ff5533
+color12 #ff7755
+
+color5  #ff3377
+color13 #ff5599
+
+color6  #ff7744
+color14 #ff9966
+
+color7  #ffccaa
+color15 #ffeedd
+cursor #ff6644
+
+selection_background #ff3311
+selection_foreground #1a0a08
