@@ -13,7 +13,7 @@ Waybar, wofi, kitty and nvim in Evangelion style
 
 nvim ~/.config/kitty/kitty.conf
 
-``include /home/Eva/.cache/wal/colors-kitty.conf``
+``include /home/user/.cache/wal/colors-kitty.conf``
 
 nvim ~/.config/hypr/hyprland.conf
 
