@@ -25,6 +25,32 @@ nvim ~/.config/hypr/hyprland.conf
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/a5e94334-36fd-40c4-a1b2-9f9a97babc3c" />
 
+# Waybar-wofi
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/a5913eee-a5c3-475a-bdbd-8617b925b037" />
+
+# Kitty
+
+<img width="1920" height="1080" alt="2026-05-10-092924_hyprshot" src="https://github.com/user-attachments/assets/53f50ac8-1909-40fe-85ef-4d79a4ef98cb" />
+
+
+nvim ~/.config/kitty/kitty.conf
+
+DELETE ``include /home/user/.cache/wal/colors-kitty.conf``
+
+nvim ~/.config/hypr/hyprland.conf
+
+DELETE ``exec-once = wal -i /home/user/your/image.jpg``
+
+# nvim
+
+<img width="1920" height="1080" alt="2026-05-10-093259_hyprshot" src="https://github.com/user-attachments/assets/5e361bd3-61c3-4ac7-b7f3-13c205b1d32d" />
+
+
+
+
+
+
 
 
 
